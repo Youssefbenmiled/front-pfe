@@ -1,0 +1,8 @@
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#add {
+    width: 40%;
+}

@@ -1,0 +1,14 @@
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/* 
+.dropdown-menu.show{
+
+    position: absolute;
+    will-change: transform;
+    top: 0px;
+    left: 0px;
+    transform: translate3d(0px, 25px, 0px);
+    max-height: 190px;
+} */

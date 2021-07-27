@@ -1,0 +1,1008 @@
+import React, { Component } from "react";
+import { Row, Card, CardTitle, Label, FormGroup, Button } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import {
+  FormikReactSelect,
+  FormikTagsInput,
+  FormikDatePicker
+} from "./FormikFields";
+import { NotificationManager } from "../../components/common/react-notifications";
+import { Formik, Form, Field } from "formik";
+
+import { loginUser } from "../../redux/actions";
+import { Colxx } from "../../components/common/CustomBootstrap";
+import IntlMessages from "../../helpers/IntlMessages";
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+      valueType: { label: "Espace tuteur", value: "tuteur" },
+      // email: "demo@gogo.com",
+      // password: "gogo123"
+    };
+  }
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      email: "",
+      password: "",
+      valueType: { label: "Espace tuteur", value: "tuteur" }
+    })
+  }
+
+  onUserLogin = values => {
+    if (!this.props.loading) {
+      if (values.email !== "" && values.password !== "") {
+        this.props.loginUser(values, this.props.history);
+      }
+    }
+  };
+
+  validateEmail = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre email";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+      error = "Email invalide";
+    }
+    return error;
+  };
+
+  validatePassword = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre mot de passe";
+    }
+    return error;
+  };
+
+  componentDidUpdate() {
+    if (this.props.error) {
+      NotificationManager.warning(
+        this.props.error,
+        "Login Error",
+        3000,
+        null,
+        null,
+        ""
+      );
+    }
+  }
+
+  handleChangeType = value => {
+    this.setState({
+      valueType: value
+    });
+  }
+  render() {
+    const { password, email, valueType } = this.state;
+    const initialValues = { email, password };
+    const types = [
+      { label: "Espace tuteur", value: "tuteur" },
+      { label: "Espace enseignant", value: "enseignant" },
+      { label: "Espace administrateur", value: "adminstrateur" },
+
+    ];
+    return (
+      <Row className="h-100">
+        <Colxx xxs="12" md="10" className="mx-auto my-auto">
+          <Card className="auth-card">
+            <div className="position-relative image-side ">
+              <p className="text-white h2">Onyx</p>
+              <p className="white mb-0">
+                {/*Please use your credentials to login. */}
+                <br />
+                Si vous n'êtes pas membre, veuillez vous{" "}
+                <NavLink to={`./register`} className="white">
+                  inscrire
+                </NavLink>
+                .
+              </p>
+              <br></br>
+
+            </div>
+            <div className="form-side">
+              {/*
+            <NavLink to={`/`} className="white">
+            <span className="logo-single" />
+            </NavLink>
+            <CardTitle className="mb-4">
+            <IntlMessages id="user.login-title" />
+            </CardTitle>
+          */}
+              <CardTitle className="mb-4">
+                <IntlMessages id="Page d'authentification " />
+              </CardTitle>
+              <Formik initialValues={initialValues} onSubmit={this.onUserLogin}>
+                {({ errors, touched }) => (
+                  <Form className="av-tooltip tooltip-label-bottom">
+                    {/* <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Utilisateur :" />
+                      </Label>
+                      <Select
+                        onChange={this.handleChangeType}
+                        value={valueType}
+                        options={types}
+                        className="react-select form-control"
+                        classNamePrefix="react-select"
+                        required
+                      />
+
+                      {errors.password && touched.password && (
+                        <div className="invalid-feedback d-block">
+                          {errors.password}
+                        </div>
+                      )}
+                    </FormGroup> */}
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Utilisateur" />
+                      </Label>
+                      <FormikReactSelect
+                        name="state"
+                        id="state"
+                        value={valueType}
+                        options={types}
+                        onChange={this.handleChangeType}
+                        onBlur={null}
+
+                      />
+                      {errors.state && touched.state ? (
+                        <div className="invalid-feedback d-block">
+                          {errors.state}
+                        </div>
+                      ) : null}
+                    </FormGroup>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Adresse e-mail" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        name="email"
+                        validate={this.validateEmail}
+                      />
+                      {errors.email && touched.email && (
+                        <div className="invalid-feedback d-block">
+                          {errors.email}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Mot de passe" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        type="password"
+                        name="password"
+                        validate={this.validatePassword}
+                      />
+                      {errors.password && touched.password && (
+                        <div className="invalid-feedback d-block">
+                          {errors.password}
+                        </div>
+                      )}
+                    </FormGroup>
+
+
+                    <div className="d-flex justify-content-between align-items-center">
+                      <NavLink to={`/user/forgot-password`}>
+                        <IntlMessages id="Mot de passe oublié ?" />
+                      </NavLink>
+                      <Button
+                        color="primary"
+                        className={`btn-shadow btn-multiple-state ${
+                          this.props.loading ? "show-spinner" : ""
+                          }`}
+                        size="lg"
+                      >
+                        <span className="spinner d-inline-block">
+                          <span className="bounce1" />
+                          <span className="bounce2" />
+                          <span className="bounce3" />
+                        </span>
+                        <span className="label">
+                          <IntlMessages id="Connexion" />
+                        </span>
+                      </Button>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+            </div>
+          </Card>
+        </Colxx>
+      </Row>
+    );
+  }
+}
+const mapStateToProps = ({ authUser }) => {
+  const { user, loading, error } = authUser;
+  return { user, loading, error };
+};
+
+export default connect(mapStateToProps, {
+  loginUser
+})(Login);
+************************************************************************************************************
+***********************************************************************************************
+import React, { Component } from "react";
+import { Row, Card, CardTitle, Label, FormGroup, Button } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+
+import { NotificationManager } from "../../components/common/react-notifications";
+import { Formik, Form, Field } from "formik";
+
+import { loginUser } from "../../redux/actions";
+import { Colxx } from "../../components/common/CustomBootstrap";
+import IntlMessages from "../../helpers/IntlMessages";
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
+      // email: "demo@gogo.com",
+      // password: "gogo123"
+    };
+  }
+
+  onUserLogin = values => {
+    if (!this.props.loading) {
+      if (values.email !== "" && values.password !== "") {
+        this.props.loginUser(values, this.props.history);
+      }
+    }
+  };
+
+  validateEmail = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre adresse e-mail s'il vous plait";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+      error = "Adresse email invalide";
+    }
+    return error;
+  };
+
+  validatePassword = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre mot de passe s'il vous plait";
+    }
+    return error;
+  };
+
+  componentDidUpdate() {
+    if (this.props.error) {
+      NotificationManager.warning(
+        this.props.error,
+        "Login Error",
+        3000,
+        null,
+        null,
+        ""
+      );
+    }
+  }
+
+  render() {
+    const { password, email } = this.state;
+    const initialValues = { email, password };
+
+    return (
+      <Row className="h-100">
+        <Colxx xxs="12" md="10" className="mx-auto my-auto">
+          <Card className="auth-card">
+            <div className="position-relative image-side ">
+              <p className="text-white h2">Onyx</p>
+              <p className="white mb-0">
+                {/*Please use your credentials to login. */}
+                <br />
+                Si vous n'êtes pas membre, veuillez vous{" "}
+                <NavLink to={`./register`} className="white">
+                  inscrire
+                </NavLink>
+                .
+              </p>
+              <br></br>
+
+            </div>
+            <div className="form-side">
+              {/*
+            <NavLink to={`/`} className="white">
+            <span className="logo-single" />
+            </NavLink>
+            <CardTitle className="mb-4">
+            <IntlMessages id="user.login-title" />
+            </CardTitle>
+          */}
+              <CardTitle className="mb-4">
+                <IntlMessages id="Page d'authentification " />
+              </CardTitle>
+              <Formik initialValues={initialValues} onSubmit={this.onUserLogin}>
+                {({ errors, touched }) => (
+                  <Form className="av-tooltip tooltip-label-bottom">
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Adresse e-mail" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        name="email"
+                        validate={this.validateEmail}
+                      />
+                      {errors.email && touched.email && (
+                        <div className="invalid-feedback d-block">
+                          {errors.email}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Mot de passe" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        type="password"
+                        name="password"
+                        validate={this.validatePassword}
+                      />
+                      {errors.password && touched.password && (
+                        <div className="invalid-feedback d-block">
+                          {errors.password}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <div className="d-flex justify-content-between align-items-center">
+                      <NavLink to={`/user/forgot-password`}>
+                        <IntlMessages id="Mot de passe oublié ?" />
+                      </NavLink>
+                      <Button
+                        color="primary"
+                        className={`btn-shadow btn-multiple-state ${
+                          this.props.loading ? "show-spinner" : ""
+                          }`}
+                        size="lg"
+                      >
+                        <span className="spinner d-inline-block">
+                          <span className="bounce1" />
+                          <span className="bounce2" />
+                          <span className="bounce3" />
+                        </span>
+                        <span className="label">
+                          <IntlMessages id="Connexion" />
+                        </span>
+                      </Button>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+            </div>
+          </Card>
+        </Colxx>
+      </Row>
+    );
+  }
+}
+const mapStateToProps = ({ authUser }) => {
+  const { user, loading, error } = authUser;
+  return { user, loading, error };
+};
+
+export default connect(mapStateToProps, {
+  loginUser
+})(Login);
+***************************************************************************************************
+forgot
+*************************************************************************************************
+import React, { Component } from "react";
+import { Row, Card, CardTitle, Label, FormGroup, Button } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import { Formik, Form, Field } from "formik";
+import { Colxx } from "../../components/common/CustomBootstrap";
+import IntlMessages from "../../helpers/IntlMessages";
+import { forgotPassword } from "../../redux/actions";
+import { NotificationManager } from "../../components/common/react-notifications";
+import { connect } from "react-redux";
+
+class ForgotPassword extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      //email: "demo@gogo.com"
+      email: "",
+      mdp: "",
+      mdp2: ""
+    };
+  }
+
+  onForgotPassword = (values) => {
+    if (!this.props.loading) {
+      if (values.email !== "") {
+        this.props.forgotPassword(values, this.props.history);
+      }
+    }
+  }
+
+
+
+  componentDidUpdate() {
+    if (this.props.error) {
+      NotificationManager.warning(
+        this.props.error,
+        "Forgot Password Error",
+        3000,
+        null,
+        null,
+        ''
+      );
+    } else {
+      if (!this.props.loading && this.props.forgotUserMail === "success")
+        NotificationManager.success(
+          "Please check your email.",
+          "Forgot Password Success",
+          3000,
+          null,
+          null,
+          ''
+        );
+    }
+
+  }
+  validateEmail = (value) => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre adresse e-mail s'il vous plait";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+      error = "Adresse email invalide";
+    }
+    return error;
+  }
+  validatePassword = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre mot de passe s'il vous plait";
+    } else if (value.length < 5) {
+      error = "La valeur doit être supérieure à 4 caractères";
+    }
+    else {
+      this.setState({ mdp: value })
+      return;
+    }
+    return error;
+  };
+  validatePassword2 = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez retapez votre mot de passe s'il vous plait";
+    } else if (value != this.state.mdp) {
+      error = "Veuillez confirmer votre mot de passe s'il vous plait";
+    }
+    else {
+      this.setState({ mdp2: value })
+    }
+    return error;
+  };
+
+
+  render() {
+
+    const { email, mdp, mdp2 } = this.state;
+    const initialValues = { email, mdp, mdp2 };
+
+    return (
+      <Row className="h-100">
+        <Colxx xxs="12" md="10" className="mx-auto my-auto">
+          <Card className="auth-card">
+            <div className="position-relative image-side ">
+              <p className="text-white h2">Onyx</p>
+              <br />
+              <p className="white mb-0">
+                Veuillez utiliser votre e-mail pour réinitialiser votre mot de passe.<br />
+                Si vous n'êtes pas membre, {" "}
+                <NavLink to={`./register`} className="white">
+                  inscrivez vous
+                </NavLink>
+                  .
+              </p>
+            </div>
+            <div className="form-side">
+
+              <CardTitle className="mb-4">
+                <IntlMessages id="Mot de passe oublié ?" />
+              </CardTitle>
+
+              <Formik
+                initialValues={initialValues}
+                onSubmit={this.onForgotPassword}>
+                {({ errors, touched }) => (
+                  <Form className="av-tooltip tooltip-label-bottom">
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Adresse e-mail" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        name="email"
+                        validate={this.validateEmail}
+                      />
+                      {errors.email && touched.email && (
+                        <div className="invalid-feedback d-block">
+                          {errors.email}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Nouveau mot de passe" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        type="password"
+                        name="password"
+                        validate={this.validatePassword}
+                      />
+                      {errors.password && touched.password && (
+                        <div className="invalid-feedback d-block">
+                          {errors.password}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Confirmer le mot de passe" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        type="password"
+                        name="password2"
+                        validate={this.validatePassword2}
+                      />
+                      {errors.password2 && touched.password2 && (
+                        <div className="invalid-feedback d-block">
+                          {errors.password2}
+                        </div>
+                      )}
+                    </FormGroup>
+
+                    <div className="d-flex justify-content-between align-items-center">
+
+                      <Button
+                        color="primary"
+                        className={`btn-shadow btn-multiple-state ${this.props.loading ? "show-spinner" : ""}`}
+                        size="lg"
+                      >
+                        <span className="spinner d-inline-block">
+                          <span className="bounce1" />
+                          <span className="bounce2" />
+                          <span className="bounce3" />
+                        </span>
+                        <span className="label"><IntlMessages id="Réinitialiser" /></span>
+                      </Button>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+            </div>
+          </Card>
+        </Colxx>
+      </Row>
+    );
+  }
+}
+
+const mapStateToProps = ({ authUser }) => {
+  const { forgotUserMail, loading, error } = authUser;
+  return { forgotUserMail, loading, error };
+};
+
+export default connect(
+  mapStateToProps,
+  {
+    forgotPassword
+  }
+)(ForgotPassword);
+
+*************************************************************************************************************
+register
+***********************************************************************************************************
+import React, { Component } from "react";
+import { Row, Card, CardTitle, Form, Label, Input, Button, FormGroup } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
+import { registerUser } from "../../redux/actions";
+import { Formik, Field } from "formik";
+
+import IntlMessages from "../../helpers/IntlMessages";
+import { Colxx } from "../../components/common/CustomBootstrap";
+
+class Register extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nom: "",
+      nomcomplet: [],
+      email: "",
+      mdp: "",
+      mdp2: ""
+      // email: "demo@gogo.com",
+      // mdp: "gogo123",
+      // mdp2: "gogo123",
+    };
+  }
+  onUserRegister() {
+    if (this.state.email !== "" && this.state.password !== "") {
+      this.props.history.push("/");
+    }
+  }
+  // onUserRegister = values => {
+  //   if (!this.props.loading) {
+  //     if (values.email !== "" && values.password !== "") {
+  //       this.props.loginUser(values, this.props.history);
+  //     }
+  //   }
+  // };
+  validateNom = value => {
+    let error;
+    let nomc = value.trim().split(' ')
+    if (!value) {
+      error = "Champ obligatoire";
+    } else if (nomc.length < 2) {
+      error = "Veuillez saisir votre nom complet s'il vous plait";
+    }
+    else {
+      this.setState({ nomc })
+      return;
+    }
+    return error;
+  };
+  validateEmail = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre adresse e-mail s'il vous plait";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+      error = "Adresse email invalide";
+    }
+    return error;
+  };
+
+  validatePassword = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez saisir votre mot de passe s'il vous plait";
+    } else if (value.length < 5) {
+      error = "La valeur doit être supérieure à 4 caractères";
+    }
+    else {
+      this.setState({ mdp: value })
+      return;
+    }
+    return error;
+  };
+  validatePassword2 = value => {
+    let error;
+    if (!value) {
+      error = "Veuillez retapez votre mot de passe s'il vous plait";
+    } else if (value != this.state.mdp) {
+      error = "Veuillez confirmer votre mot de passe s'il vous plait";
+    }
+    else {
+      this.setState({ mdp2: value })
+    }
+    return error;
+  };
+
+
+  render() {
+    const { email, mdp, mdp2, nom } = this.state;
+    const initialValues = { nom, email, mdp, mdp2 };
+
+
+    return (
+      <Row className="h-100">
+        <Colxx xxs="12" md="10" className="mx-auto my-auto">
+          <Card className="auth-card">
+            <div className="position-relative image-side ">
+              <p className="text-white h2">Onyx</p>
+              <br />
+
+              <p className="white mb-0">
+                Veuillez utiliser ce formulaire pour vous inscrire. <br />
+                Si vous êtes membre, connectez-vous s'il vous plait ,{" "}
+                <NavLink to={`/user/login`} className="white">
+                  s'identifier
+                </NavLink>
+                .
+              </p>
+            </div>
+            <div className="form-side">
+              {/* <NavLink to={`/`} className="white">
+                <span className="logo-single" />
+              </NavLink> */}
+              <CardTitle className="mb-4">
+                <IntlMessages id="INSCRIPTION" />
+              </CardTitle>
+              <Formik initialValues={initialValues} onSubmit={this.onUserLogin}>
+                {({ errors, touched }) => (
+                  <Form>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Nom complet" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        name="nom"
+                        validate={this.validateNom}
+                      />
+
+                      {errors.nom && touched.nom && (
+                        <div className="invalid-feedback d-block">
+                          {errors.nom}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Adresse e-mail" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        name="email"
+                        validate={this.validateEmail}
+                      />
+
+                      {errors.email && touched.email && (
+                        <div className="invalid-feedback d-block">
+                          {errors.email}
+                        </div>
+                      )}
+                    </FormGroup>
+
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Mot de passe" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        type="password"
+                        name="password"
+                        validate={this.validatePassword}
+
+                      />
+                      {errors.password && touched.password && (
+                        <div className="invalid-feedback d-block">
+                          {errors.password}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <FormGroup className="form-group has-float-label">
+                      <Label>
+                        <IntlMessages id="Confirmer le mot de passe" />
+                      </Label>
+                      <Field
+                        className="form-control"
+                        type="password"
+                        name="password2"
+                        validate={this.validatePassword2}
+                      />
+                      {errors.password2 && touched.password2 && (
+                        <div className="invalid-feedback d-block">
+                          {errors.password2}
+                        </div>
+                      )}
+                    </FormGroup>
+                    <div className="d-flex justify-content-end align-items-center">
+                      <Button
+                        color="primary"
+                        className="btn-shadow"
+                        size="lg"
+                        onClick={() => this.onUserRegister()}
+                      >
+                        <IntlMessages id="Inscription" />
+                      </Button>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+            </div>
+          </Card>
+        </Colxx>
+      </Row>
+    );
+  }
+}
+const mapStateToProps = ({ authUser }) => {
+  const { user, loading } = authUser;
+  return { user, loading };
+};
+
+export default connect(
+  mapStateToProps,
+  {
+    registerUser
+  }
+)(Register);
+**************************************************************************************************************
+reset
+*********************************************************************************************************************
+import React, { Component } from "react";
+import { Row, Card, CardTitle, Label, FormGroup, Button } from "reactstrap";
+import { NavLink } from "react-router-dom";
+import { Formik, Form, Field } from "formik";
+import { Colxx } from "../../components/common/CustomBootstrap";
+import IntlMessages from "../../helpers/IntlMessages";
+import { resetPassword } from "../../redux/actions";
+import { NotificationManager } from "../../components/common/react-notifications";
+import { connect } from "react-redux";
+
+class ResetPassword extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            newPassword: '',
+            newPasswordAgain: ''
+        };
+    }
+
+    onResetPassword = (values) => {
+        if (!this.props.loading) {
+            const params = new URLSearchParams(this.props.location.search);
+            const oobCode = params.get('oobCode');
+            if (oobCode) {
+                if (values.newPassword !== "") {
+                    this.props.resetPassword({ newPassword: values.newPassword, resetPasswordCode: oobCode, history: this.props.history });
+                }
+            } else {
+                NotificationManager.warning(
+                    "Please check your email url.",
+                    "Reset Password Error",
+                    3000,
+                    null,
+                    null,
+                    ''
+                );
+            }
+
+        }
+    }
+
+    validateNewPassword = (values) => {
+        const { newPassword, newPasswordAgain } = values;
+        let errors = {};
+        if (newPasswordAgain && newPassword !== newPasswordAgain) {
+            errors.newPasswordAgain = "Please check your new password";
+        }
+        return errors;
+    }
+
+    componentDidUpdate() {
+        if (this.props.error) {
+            NotificationManager.warning(
+                this.props.error,
+                "Forgot Password Error",
+                3000,
+                null,
+                null,
+                ''
+            );
+        } else {
+            if (!this.props.loading && this.props.newPassword === "success")
+                NotificationManager.success(
+                    "Please login with your new password.",
+                    "Reset Password Success",
+                    3000,
+                    null,
+                    null,
+                    ''
+                );
+        }
+
+    }
+
+
+    render() {
+        const { newPassword, newPasswordAgain } = this.state;
+        const initialValues = { newPassword, newPasswordAgain };
+
+        return (
+            <Row className="h-100">
+                <Colxx xxs="12" md="10" className="mx-auto my-auto">
+                    <Card className="auth-card">
+                        <div className="position-relative image-side ">
+                            <p className="text-white h2">MAGIC IS IN THE DETAILS</p>
+                            <p className="white mb-0">
+                                Please use your e-mail to reset your password. <br />
+                                If you are not a member, please{" "}
+                                <NavLink to={`/register`} className="white">
+                                    register
+                </NavLink>
+                                .
+              </p>
+                        </div>
+                        <div className="form-side">
+                            <NavLink to={`/`} className="white">
+                                <span className="logo-single" />
+                            </NavLink>
+                            <CardTitle className="mb-4">
+                                <IntlMessages id="user.reset-password" />
+                            </CardTitle>
+
+                            <Formik
+                                validate={this.validateNewPassword}
+                                initialValues={initialValues}
+                                onSubmit={this.onResetPassword}>
+                                {({ errors, touched }) => (
+                                    <Form className="av-tooltip tooltip-label-bottom">
+                                        <FormGroup className="form-group has-float-label">
+                                            <Label>
+                                                <IntlMessages id="user.new-password" />
+                                            </Label>
+                                            <Field
+                                                className="form-control"
+                                                name="newPassword"
+                                                type="password"
+                                            />
+                                        </FormGroup>
+                                        <FormGroup className="form-group has-float-label">
+                                            <Label>
+                                                <IntlMessages id="user.new-password-again" />
+                                            </Label>
+                                            <Field
+                                                className="form-control"
+                                                name="newPasswordAgain"
+                                                type="password"
+                                            />
+                                            {errors.newPasswordAgain && touched.newPasswordAgain && (
+                                                <div className="invalid-feedback d-block">
+                                                    {errors.newPasswordAgain}
+                                                </div>
+                                            )}
+                                        </FormGroup>
+
+                                        <div className="d-flex justify-content-between align-items-center">
+                                            <NavLink to={`/user/login`}>
+                                                <IntlMessages id="user.login-title" />
+                                            </NavLink>
+                                            <Button
+                                                color="primary"
+                                                className={`btn-shadow btn-multiple-state ${this.props.loading ? "show-spinner" : ""}`}
+                                                size="lg"
+                                            >
+                                                <span className="spinner d-inline-block">
+                                                    <span className="bounce1" />
+                                                    <span className="bounce2" />
+                                                    <span className="bounce3" />
+                                                </span>
+                                                <span className="label"><IntlMessages id="user.reset-password-button" /></span>
+                                            </Button>
+                                        </div>
+                                    </Form>
+                                )}
+                            </Formik>
+                        </div>
+                    </Card>
+                </Colxx>
+            </Row>
+        );
+    }
+}
+
+const mapStateToProps = ({ authUser }) => {
+    const { newPassword, resetPasswordCode, loading, error } = authUser;
+    return { newPassword, resetPasswordCode, loading, error };
+};
+
+export default connect(
+    mapStateToProps,
+    {
+        resetPassword
+    }
+)(ResetPassword);
+
+

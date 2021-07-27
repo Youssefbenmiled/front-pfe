@@ -1,0 +1,15 @@
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/* 
+.dropdown-menu.show {
+    display: block;
+
+position: absolute;
+will-change: transform;
+top: 412px;
+left: 0px;
+transform: translate3d(0px, -389px, 0px);
+max-height: 150px;
+} */

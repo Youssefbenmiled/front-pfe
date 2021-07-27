@@ -1,0 +1,54 @@
+
+  .chronique-cantine{
+    .table-responsive{
+      display: block;
+      color: grey;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      
+        width: 100%;
+        margin-left: 0%;
+        th#vide {
+          width: 110px;
+      }
+      th#jour {
+        width: 110px;text-align: center;
+    }
+    th#date {
+      width: 110px;
+  }
+  th#pp {
+    width: 275px;
+    text-align: center;
+}
+    th#date{text-align: center;}
+    th#entree{text-align: center; }
+    th#dessert{text-align: center;}
+    th#auj{text-align: center;}
+    th#lundi{text-align: center;}
+    th#datelundi{text-align: center;}
+    th#mardi{text-align: center;}
+    th#datemardi{text-align: center;}
+    th#mercredi{text-align: center;}
+    th#datemercredi{text-align: center;}
+    th#jeudi{text-align: center;}
+    th#datejeudi{text-align: center;}
+    th#vendredi{text-align: center;}
+    th#datevendredi{text-align: center;}
+    th#samedi{text-align: center;}
+    th#datesamedi{text-align: center;}
+    td#entreelundi{text-align: center;}
+    td#pplundi{text-align: center;}
+    td#dessertlundi{text-align: center;}
+    ul#ul{list-style-type:circle;}
+    
+  }
+  div#cardelev {
+    height: 100%;
+    width: 220%;
+    margin-left: -62%;
+}
+  }
+
+ 

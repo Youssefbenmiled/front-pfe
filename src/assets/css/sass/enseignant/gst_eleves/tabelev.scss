@@ -1,0 +1,48 @@
+div#cardelev {
+    width: 101%;
+    margin-left: -2px;
+    margin-top: 5%;
+    .table-responsive {
+        display: block;
+        width: 100%;
+        margin-left: 0%;
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+            margin-left: 0%;
+        
+    th#nom{    width:10%;text-align: center;
+    }
+    td#nom{    text-align: center;
+    }
+    th#pre{    width:10%;text-align: center;
+    }
+    td#pre{    text-align: center;
+    }
+    th#dns {
+        width: 8%;text-align: center;
+    }
+    td#dns {
+      text-align: center;
+    }
+}
+}
+}
+
+// .table {
+//     width: 100%;
+//     margin-bottom: 1rem;
+//     background-color: transparent;
+//     margin-left: 11%;
+// }
+
+// th#nom{    width:10%
+// }
+// th#pre{    width:10%
+// }
+
+
+// th#dns {
+//     width: 5%;
+// }

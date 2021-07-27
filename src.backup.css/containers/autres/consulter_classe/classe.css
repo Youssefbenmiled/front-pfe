@@ -1,0 +1,23 @@
+button#modif {
+  padding: 0px;
+  padding-right: 25px;
+  padding-left: 10px;
+}
+button#supp {
+  padding: 0px;
+  padding-right: 15px;
+  padding-left: 10px;
+}
+.check-button .custom-control {
+  min-height: 1.1rem;
+  margin-top: 13px;
+  margin-left: -11px;
+  margin-right: 4px;
+}
+#tltp {
+  width: 200%;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 35px;
+  padding-right: 35px;
+}

@@ -1,0 +1,136 @@
+.tous-cours{
+    div#cardelev {
+        width: 100%;
+        margin-left: 0%;
+        height: 100%;
+        margin-top: 20px;
+    }
+    .table-responsive {
+        margin-top: 52px;
+        margin-left: 11px;
+        display: block;
+        width: 98%;
+        color: grey;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        th#cours {
+            text-align: center; 
+        }        
+        td#voir {
+            width: 13%;
+            text-align: center; 
+
+        }
+        td#telecharger {
+            width: 13%;
+            text-align: center; 
+
+        }
+
+    th#classe {
+        text-align: center;    }
+    td#classe {
+        text-align: center;    }
+    th#date{
+        text-align: center;
+        width: 132px;
+    }
+    td#date{
+        text-align: center;
+        
+    }
+    th#desc {
+        text-align: center;
+        width: 27%
+        
+    }
+    td#desc {
+        text-align: center;
+        width: 27%
+
+    }
+    th#mat {
+        text-align: center;
+    }
+    td#mat {
+        text-align: center;
+    }
+    th#ens {
+        text-align: center;
+        width: 231px;
+    }
+    td#ens {
+        text-align: center;
+    }
+
+    }
+}
+.cours-mat{
+    div#cardelev {
+        width: 100%;
+        margin-left: 0%;
+        height: 100%;
+        margin-top: 20px;
+    }
+    .table-responsive {
+        margin-top: 52px;
+        margin-left: 11px;
+        display: block;
+        width: 98%;
+        color: grey;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        th#cours {
+            text-align: center; 
+        }        
+        td#voir {
+            width: 13%;
+            text-align: center; 
+
+        }
+        td#telecharger {
+            width: 13%;
+            text-align: center; 
+
+        }
+
+    th#classe {
+        text-align: center;    }
+    td#classe {
+        text-align: center;    }
+    th#date{
+        text-align: center;
+        width: 132px;
+    }
+    td#date{
+        text-align: center;
+        
+    }
+    th#desc {
+        text-align: center;
+        width: 27%
+        
+    }
+    td#desc {
+        text-align: center;
+        width: 27%
+
+    }
+    th#mat {
+        text-align: center;
+    }
+    td#mat {
+        text-align: center;
+    }
+    th#ens {
+        text-align: center;
+        width: 231px;
+    }
+    td#ens {
+        text-align: center;
+    }
+
+    }
+}

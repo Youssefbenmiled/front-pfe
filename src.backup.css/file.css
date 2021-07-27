@@ -1,0 +1,1578 @@
+
+/*css ecole*/
+/* add calendrier */
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/* delete calendrier */
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/* pageheading calendrier */
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/*add carnet*/
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/*delete carnet*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*classe carnet.css*/
+button#modif {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*pageheading carnet.css*/
+  .dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/*add.css emploi_eleve*/
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/*delete.css emploi_eleve*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css emploi_eleve*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*add.css emploi_ensss*/
+
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/*delete.css emploi_ensss*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css emploi_ensss*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*classe.css emploi_ensss*/
+
+
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+
+/*delete.css emploi_enss*/
+
+  button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+
+
+}
+
+/*pageheading.css emploi_enss*/
+
+
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+
+
+/* add.css   event*/
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/* classe.css   event*/
+
+
+button#modif {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/* context.css   event*/
+
+
+  #modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+
+/* delete.css   event*/
+
+
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+
+/* pageheading.css   event*/
+
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/* update.css   event*/
+
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-top: -62px;
+    margin-right: 75px;
+}
+
+
+
+
+/* 
+add admins
+*/
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+
+/* 
+classe admins
+*/
+
+button#modif {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  /*context.css admins*/
+  #modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+
+/*delete.css  admins*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+
+
+/*pageheading.css adminss*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/*update admins*/
+
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-top: -62px;
+    margin-right: 75px;
+}
+
+/*add .css bus*/
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/*context.css bus*/
+#modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+/*delete.css bus*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css bus*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css bus*/
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-top: -62px;
+    margin-right: 75px;
+}
+/*add.css classe*/
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#add {
+    width: 40%;
+}
+/*classe.css classe*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css classe*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css classe*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css classe*/
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-top: -62px;
+    margin-right: 75px;
+}
+
+
+/*add.css domaine*/
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/*classe.css domaine*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css domaine*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css domaine*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css domaine*/
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-top: -62px;
+    margin-right: 75px;
+}
+
+
+/*add.css eleve*/
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#annulerCSV {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -14%;
+}
+/*classe.css eleve*/
+button#modif {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css eleve*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*context.css eleve*/
+#modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+/*pageheading.css eleve*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css eleve*/
+button#modifier {
+    width: 40%;
+}
+button#annulerupelv {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -60px;
+}
+
+
+/*add.css ens*/
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#addaddens {
+    width: 40%;
+}
+button#addannens {
+    width: 40%;
+    margin-left: 88px;
+}
+button#anntyp {
+    width: 40%;
+    margin-left: 30%;
+}
+
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annulerCSV {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -14%;
+}
+
+
+/*classe.css ens*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css ens*/
+
+button#annens {
+    width: 30%;
+    margin-left: 310px;
+    margin-top: -62px;
+}
+button#delens {
+    width: 30%;
+}
+
+button#annens2 {
+    width: 30%;
+    margin-left: 315px;
+    margin-top: -62px;
+}
+/*pageheading.css ens*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css ens*/
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -60px;
+}
+
+
+
+
+
+/*add.css matiere*/
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+/*classe.css matiere*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css matiere*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css matiere*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css matiere*/
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-top: -62px;
+    margin-right: 75px;
+}
+
+
+/*add.css tuteur*/
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}button#anntyp {
+    width: 40%;
+    margin-left: 30%;
+}
+button#annulerCSV {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -14%;
+}
+/*classe.css tuteur*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  
+/*context.css tuteur*/
+#modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+/*delete.css tuteur*/
+
+button#delann {
+    width: 30%;
+    margin-left: 500px;
+    margin-top: -62px;
+}
+button#delsupp {
+    width: 30%;
+}
+/*pageheading.css tuteur*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css tuteur*/
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-top: -62px;
+    margin-right: 75px;
+}
+
+
+
+/*classe.css abs*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*pageheading.css abs*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+
+/*add.css cantine*/
+button#annuldat {
+    width: 40%;
+    
+    margin-left: 260px;
+    margin-top: -14%;
+}
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#add {
+    width: 40%;
+}
+
+/*classe.css cantine*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css cantine*/
+button#supdat {
+    width: 20%;
+    margin-left: 25%;
+}
+button#supandat {
+    width: 20%;
+    margin-left: 7%;
+    margin-top: 0%;
+}
+
+/*pageheading.css cantine*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css cantine*/
+button#mup {
+    width: 40%;
+}
+button#anup {
+    width: 40%;
+    margin-top: -14%;
+    margin-left: 260px;
+}
+
+
+/*css enseignant*/
+
+
+
+
+
+/*ens classe.css calendrier*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+/*ens pageheading.css calendrier*/
+
+  .dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+
+
+/*ens emploi*/
+/*ens classe.css emploi*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*ens pageheading.css emploi*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+
+
+
+
+
+/*ens absence*/
+/*add.css absence*/
+button#annulabs {
+    width: 20%;
+    margin-left: 590px;
+    margin-top: -8%;
+}
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+
+button#addabs {
+    width: 20%;
+}
+
+/*classe.css absence*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css absence*/
+button#supdat {
+    width: 20%;
+    margin-left: 25%;
+}
+button#supandat {
+    width: 20%;
+    margin-left: 7%;
+    margin-top: 0%;
+}
+
+/*pageheading.css absence*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css absence*/
+button#mup {
+    width: 40%;
+}
+button#anup {
+    width: 40%;
+    margin-top: -14%;
+    margin-left: 260px;
+}
+
+
+/*ens evaluation*/
+
+
+
+
+
+/*add.css evaluation*/
+
+button#annuldat {
+    width: 40%;
+    
+    margin-left: 260px;
+    margin-top: -14%;
+}
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#add {
+    width: 40%;
+}
+
+/*classe.css evaluation*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css evaluation*/
+button#supdat {
+    width: 20%;
+    margin-left: 25%;
+}
+button#supandat {
+    width: 20%;
+    margin-left: 7%;
+    margin-top: 0%;
+}
+
+/*pageheading.css evaluation*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css evaluation*/
+button#mup {
+    width: 40%;
+}
+button#anup {
+    width: 40%;
+    margin-top: -14%;
+    margin-left: 260px;
+}
+/*ens devoir*/
+
+
+
+
+/*add.css devoir*/
+
+
+button#andev {
+    width: 40%;
+    margin-top: 0px;
+    margin-left: 20%;
+} 
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#adev {
+    width: 40%;
+}
+
+
+
+
+
+
+/*classe.css devoir*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*context.css devoir*/
+#modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+/*delete.css devoir*/
+button#supdev {
+    width: 20%;
+    margin-left: 25%;
+}
+button#supan {
+    width: 20%;
+    margin-left: 7%;
+    margin-top: 0%;
+}
+
+/*pageheading.css devoir*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*update.css devoir*/
+button#mupdev {
+    width: 40%;
+}
+button#anupdev {
+    width: 40%;
+    margin-top: -14%;
+    margin-left: 59%;
+}
+
+
+
+/*ens event*/
+
+
+
+/*context.css event*/
+
+#modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+
+/*pageheading.css event*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+
+/*ens notes*/
+
+
+/*add.css notes*/
+
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+button#ajouter {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+
+
+/*classe.css notes*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+
+
+/*delete.css notes*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css notes*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+
+
+/*tuteur css*/
+/*administration tuteur*/
+
+
+
+/*calendrier.css tuteur*/
+/*classe.css tuteur*/
+
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*delete.css tuteur*/
+button#modifier {
+    margin-right: 226px;
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -62px;
+}
+button#supprimer {
+    width: 40%;
+}
+/*pageheading.css tuteur*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*carnets.css tuteur*/
+
+/*classe.css tuteur*/
+button#modif {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*pageheading.css tuteur*/
+
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/*emploi.css tuteur*/
+/*classe.css*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  /*pageheading.css*/
+  .dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*enseignement.css tuteur*/
+
+
+/*absence tuteur*/
+/*classe.css*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*pageheading.css*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/*date_evaluation tuteur*/
+/*classe.css*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*pageheading.css*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*devoir tuteur*/
+/*classe.css*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*pageheading.css*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/*event tuteur*/
+/*context.css*/
+#modif {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+}
+#supp {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+/*pageheading.css*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*horaires tuteur*/
+
+/*bus tuteur*/
+/*pageheading.css*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+
+/*cantine tuteur*/
+/*classe.css*/
+button#modif {
+    padding: 0px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+  button#supp {
+    padding: 0px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+  #tltp {
+    width: 200%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+/*pageheading.css*/
+.dropdown-menu.dropdown-menu-right.show {
+    margin-top: 284px;
+    margin-left: 125px;
+}
+/*table.css*/
+
+
+
+
+
+
+
+.tr {
+    width: 800px !important;
+    height: 200px !important;
+  }
+  .search-sm.d-inline-block.float-md-left.mr-1.mb-1.align-top {
+    margin-top: -76px;
+    margin-left: 230px;
+  }
+  .search-sm input {
+    background: none;
+    outline: medium none invert !important;
+    outline: initial !important;
+    border: 1px solid #757575;
+    border-radius: 15px;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    font-size: 0.76rem;
+    line-height: 1.3;
+    color: #969696;
+    margin-left: 0px;
+  }
+  html{
+   overflow: auto
+  }
+  body{
+    /* overflow: auto; */
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+
+/**/
+/**/
+/**/
+/**/
+/**/

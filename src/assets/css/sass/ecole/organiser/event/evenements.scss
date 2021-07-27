@@ -1,0 +1,35 @@
+
+#titre {
+  width: 100%;
+}
+#form-lieu{
+  
+    margin-top: -13px;
+
+  #lieu {
+    width: 100%;
+  }
+}
+
+#desc {
+  width: 100%;
+  resize: none;
+}
+.boutons{
+  margin: auto;
+  width: 40%;
+  //border: 3px solid #73AD21;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+   #Eventenvoyer {
+    width: 45%;
+    margin-top: 30px;
+    margin-left: 3px;
+}
+#Eventreset {
+  width: 45%;
+  margin-top: 30px;
+  margin-left: 6%;
+}
+}

@@ -1,0 +1,47 @@
+#CB {
+  width: 156%;
+}
+#Card {
+  /* background-color: green;*/
+  width: 690px;
+}
+#DU {
+  flex: 0 0 50%;
+  max-width: 100% !important;
+  margin-left: 15%;
+}
+#AU {
+  flex: 0 0 50%;
+  max-width: 100% !important;
+  margin-left: 15%;
+}
+#send {
+  width: 22%;
+  margin-top: 30px;
+}
+#reset {
+  width: 22%;
+  margin-top: 30px;
+}
+.picker-AU {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #aeaeae;
+  border-radius: 0.3rem;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+}
+.picker-DU {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #aeaeae;
+  border-radius: 0.3rem;
+  display: inline-block;
+  position: relative;
+  left: 0px;
+}

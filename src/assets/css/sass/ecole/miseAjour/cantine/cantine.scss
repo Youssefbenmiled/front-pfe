@@ -1,0 +1,61 @@
+/* /* #send {
+    width: 191%;
+    margin-top: 50px;
+    border-color: #334080 !important;
+    background-color: #334080 !important;
+    margin-right: 12px;
+}
+#reset {
+    width: 171%;
+    margin-top: 50px;
+    background-color: #c82333;
+    border-color: #bd2130;
+    margin-left: 25px;
+} 
+#send {
+    width: 40%;
+    margin-top: -40px;
+    margin-left: 0px;
+    border-color: #334080 !important;
+    background-color: #334080 !important;
+  }
+  #reset {
+    width: 40%;
+    margin-top: -40px;
+    background-color: #c82333;
+    border-color: #bd2130;
+    margin-left: 82px;
+  } */
+  .table-responsive {
+    display: block;
+    width: 150%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    margin-left: -25%;
+}
+button#cantinemodif {
+  width: 200%;
+  margin-top: 30%;
+  margin-left: 230%;
+}
+
+button#resetjour {
+  width: 35%;
+  margin-left: 27%;
+}
+button#sendjour {
+  width: 35%;
+}
+button#cannuler {
+  width: 185px;
+  margin-left: 170%;
+  margin-top: 27px;
+}
+button#modifjour {
+  width: 190px;
+}
+button#annuljour {
+  width: 190px;
+  margin-left: 90px;
+}

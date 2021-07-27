@@ -1,0 +1,109 @@
+@import './d-picker';
+
+    .ens{
+        input#enseignant {
+            width: 44%;
+        }
+    }
+    .mat{
+        
+            margin-top: -9%;
+            margin-left: 56%;
+        
+        input#matiere {
+            width: 100%;
+        }
+    }
+.row-abs{
+
+    div#cardabs {
+        width: 100%;
+        margin-left: 0px;
+        height: 830px;
+    
+    
+
+#tababs{
+    .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+        margin-left: 43px;
+    }
+    .table-responsive {
+        display: block;
+        width: 100%;
+        margin-left: 0%;
+    
+    #table {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 30px;
+        background-color: transparent;
+        display: block;
+        margin-left: 0%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+ 
+    th#num{
+        width:1%;
+        text-align: center;
+        border: 2px solid;
+    }
+    td#num{
+        width:1%;
+        text-align: center;
+        border: 2px solid;
+
+    }
+    
+    th#nom{    width:10%;text-align: center;        border: 2px solid;
+
+    }
+    td#nom{    width:10%;text-align: center;        border: 2px solid;
+
+    }
+    th#pre{    width:10%;text-align: center;        border: 2px solid;
+
+    }
+    td#pre{    width:10%;text-align: center;        border: 2px solid;
+
+    }
+    th#abs{
+        width:1%;text-align: center;        border: 2px solid;
+
+    }
+    td#abs{
+        margin: auto;
+        border: 2px solid;
+
+  
+    }
+}
+    }
+}
+.btn-abs{
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    margin-top: 0%;
+    margin-bottom: 2%;
+}
+    #envoyer {
+        width: 40%;
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+#reset {
+    width: 40%;
+    margin-top: 0%;
+    margin-left: 20%;
+}
+}
+
+
+}
+
+

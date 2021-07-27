@@ -1,0 +1,9 @@
+button#modifier {
+    width: 40%;
+}
+button#annuler {
+    width: 40%;
+    margin-left: 265px;
+    margin-top: -60px;
+}
+

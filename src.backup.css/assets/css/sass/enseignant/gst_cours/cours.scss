@@ -1,0 +1,35 @@
+.card-travail{
+    height: 93%;
+    margin-top: 5%;
+    
+    form#form {
+        margin-top: 27px;
+    }
+
+    div#form-travail {
+        margin-top: 15px;
+        textarea#travail {
+            width: 100%;
+            resize: none;
+        }
+    }
+    div#form-file {
+        margin-top: 43px;
+        #filet{
+            width: 100%;
+        }
+    }
+    
+    
+  
+        button#Coursenvoyer {
+            width: 45%;
+            margin-top: 30px;
+            margin-left: 3px;
+        }
+        button#Coursreset {
+            width: 45%;
+            margin-top: 30px;
+            margin-left: 5%;
+        }
+}

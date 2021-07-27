@@ -1,0 +1,87 @@
+@media (min-width: 640px) {
+  .form-control {
+    border-radius: 0.1rem;
+    outline: medium none invert !important;
+    outline: initial !important;
+    box-shadow: none !important;
+    box-shadow: initial !important;
+    font-size: 0.7rem;
+    padding: -0.25rem;
+    line-height: 1.5;
+    border: 1px solid #d7d7d7;
+    background: white;
+    color: #303030;
+    height: auto;
+    height: initial;
+    width: 90px;
+  }
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  width: 228%;
+  margin-left: -348px;
+  height: auto;
+}
+.btn-secondary {
+  background-color: #4556ac;
+  border-color: #4556ac;
+  color: #fff;
+  width: 290%;
+  margin-left: 510%;
+  margin-top: 30%;
+}
+.btn-danger {
+  color: #fff;
+  margin-left: 550%;
+  width: 190%;
+}
+.table th,
+.table td {
+  padding: 0.45rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+#send {
+  width: 45%;
+  margin-top: 30px;
+  margin-left: 310px;
+  border-color: #334080 !important;
+  background-color: #334080 !important;
+}
+#reset {
+  margin-top: 20px;
+  width: 210%;
+}
+#ligne {
+  margin-top: 15px;
+}
+#select-jour {
+  margin-top: 15px;
+}
+#mode {
+  margin-top: 15px;
+}
+#tab {
+  margin-top: 20px;
+}
+#ta {
+  width: 95%;
+  resize: none;
+}
+#telecharger {
+  width: 192%;
+  display: block;
+  margin: auto;
+  margin-left: 173%;
+  margin-top: 20px;
+}
+.centerss {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}

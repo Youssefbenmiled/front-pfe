@@ -1,0 +1,16 @@
+/* /* button#add {
+    width: 40%;
+} */
+button#annulabs {
+    width: 20%;
+    margin-left: 590px;
+    margin-top: -8%;
+}
+.modal .modal-footer {
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}
+
+button#addabs {
+    width: 20%;
+}

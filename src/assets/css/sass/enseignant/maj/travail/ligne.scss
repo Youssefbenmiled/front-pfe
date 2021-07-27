@@ -1,0 +1,36 @@
+.ligne-travail{
+    
+    
+    a.nav_link_modifier:hover {
+        cursor: pointer;
+        color: blue; 
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.5); 
+          #modif {
+            margin-left: 0%;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 0px;
+        }  
+         }
+
+
+
+a.nav_link_supprimer:hover {
+        cursor: pointer;
+        color: red; 
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.5); 
+        #supp {
+          margin-left: 0%;
+          width: 100%;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 15px;
+      }
+
+      }
+    }

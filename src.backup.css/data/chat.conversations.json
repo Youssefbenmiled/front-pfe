@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "users": [
+        0,
+        1
+      ],
+      "lastMessageTime": "18:20",
+      "messages": [
+        {
+          "sender": 0,
+          "time": "09:25",
+          "text": "Bonjour monsieur"
+        },
+        {
+          "sender": 0,
+          "time": "09:29",
+          "text": "Bonjour comment cava"
+        },
+        {
+          "sender": 0,
+          "time": "09:36",
+          "text": "Merci est ce que vous pouvez m'aider à propos mon enfant ?"
+        },
+        {
+          "sender": 1,
+          "time": "10:12",
+          "text": "Oui avec plaisir!"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "users": [
+        0,
+        4
+      ],
+      "lastMessageTime": "10:20",
+      "messages": [
+        {
+          "sender": 0,
+          "time": "09:25",
+          "text": "Bonjour monsieur"
+        },
+        {
+          "sender": 4,
+          "time": "09:29",
+          "text": "Bonjour comment cava"
+        },
+        {
+          "sender": 4,
+          "time": "09:36",
+          "text": "Merci est ce que vous pouvez m'aider à propos mon enfant ?"
+        },
+        {
+          "sender": 0,
+          "time": "10:12",
+          "text": "Oui avec plaisir!"
+        }
+      ]
+    }
+  ]
+}

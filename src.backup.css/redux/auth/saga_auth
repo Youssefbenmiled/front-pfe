@@ -1,0 +1,363 @@
+
+import { all, call, fork, put, takeEvery } from 'redux-saga/effects';
+import { auth } from '../../helpers/Firebase';
+import axios from "axios"
+import {
+    LOGIN_USER,
+    REGISTER_USER,
+    LOGOUT_USER,
+    FORGOT_PASSWORD,
+    RESET_PASSWORD,
+} from '../actions';
+import { NotificationManager } from "../../components/common/react-notifications";
+
+import {
+    loginUserSuccess,
+    loginUserError,
+    registerUserSuccess,
+    registerUserError,
+    forgotPasswordSuccess,
+    forgotPasswordError,
+    resetPasswordSuccess,
+    resetPasswordError
+} from './actions';
+
+
+export function* watchLoginUser() {
+    yield takeEvery(LOGIN_USER, loginWithEmailPassword);
+}
+
+const loginWithEmailPasswordAsync = async (email, password) =>
+    await auth.signInWithEmailAndPassword(email, password)
+        .then(authUser => authUser)
+        .catch(error => error);
+
+
+
+function* loginWithEmailPassword({ payload }) {
+    console.log(payload, 'login')
+    const { email, password, type } = payload.user;
+    const { history } = payload;
+    try {
+        // localStorage.clear();
+        var url;
+        switch (type) {
+            case 'tuteur':
+                url = "http://api.onyx.inedit-gd.tn/user/auth"
+                break;
+            case 'enseignant':
+                url = "http://api.onyx.inedit-gd.tn/user/auth"
+                break;
+            case 'adminstrateur':
+                url = "http://api.onyx.inedit-gd.tn/admins/auth/login"
+                break;
+            default:
+                url = ""
+        }
+
+
+        const data = yield axios({
+            method: 'post',
+            url: url,
+            data: { "email": email, "password": password },
+        }).then(res => res)
+        // ,error=>{
+
+        //     NotificationManager.error(
+        //         "Erreur d'authentification",
+        //         type,
+        //         5000,
+        //         null,
+        //         null,
+        //     );
+        // }
+        console.log(data, 'dlog')
+
+        if (data.status === 200) {
+            var loginUser = data.data
+            const { id, nomPrenom, email, dateCreation, roles, firstlogin, statut } = loginUser;
+            loginUser = { user: { id, nomPrenom, email, dateCreation, roles, firstlogin }, statut };
+            localStorage.setItem('user_id', loginUser.user.id);
+            localStorage.setItem('user_role', loginUser.user.roles);
+            localStorage.setItem('first_login', loginUser.user.firstlogin);
+            localStorage.setItem('type', type);
+
+            yield put(loginUserSuccess(loginUser.user));
+
+
+
+
+
+
+            // if (loginUser.user.roles === localStorage.getItem('user_role') && firstlogin === 0
+            // )
+
+            console.log('eeeee',
+                ['ROLE_GESTION_ECOLE', 'ROLE_EMPLOI', 'ROLE_NOTES', 'ROLE_CALENDRIER_EXAMENS', 'ROLE_ORGANISATION']
+                    .includes(localStorage.getItem('user_role').trim().split(' ')),
+                localStorage.getItem('user_role').trim().split(' ')[0],
+
+            )
+
+            // if (localStorage.getItem('user_role') && firstlogin === 0) {
+            //     history.push('/user/reset-password');
+            // }
+
+            // else
+            if (['ROLE_GESTION_ECOLE', 'ROLE_EMPLOI', 'ROLE_NOTES', 'ROLE_CALENDRIER_EXAMENS', 'ROLE_ORGANISATION']
+                .includes(localStorage.getItem('user_role').trim().split(' ')[0]) && firstlogin === 0
+                // && loginUser.statut === "actif"
+            ) {
+
+                history.push('/ecole/accueil');
+                localStorage.setItem('accueil', '/ecole/accueil');
+
+            }
+            else if (loginUser.user.roles === "ROLE_PARENT" && firstlogin === 1) {
+                history.push('/parent/accueil');
+                localStorage.setItem('accueil', '/parent/accueil');
+
+            }
+            else if (loginUser.user.roles === "ROLE_ENS" && firstlogin === 1) {
+                history.push('/enseignant/accueil');
+                localStorage.setItem('accueil', '/enseignant/accueil');
+
+            }
+        }
+
+        else {
+            // alert('elseeeeeeee1')
+            yield put(loginUserError("error login"));
+            NotificationManager.error(
+                "Erreur d'authentification",
+                type,
+                5000,
+                null,
+                null,
+            );
+
+
+        }
+
+
+
+
+        if (loginUser) {
+            // localStorage.setItem('user_id', loginUser.user.email);
+            // localStorage.setItem('user_role', loginUser.user.roles);
+            // yield put(loginUserSuccess(loginUser.user));
+            // if (loginUser.user.roles == "ROLE_ADMIN") {
+            //     history.push('/ecole/accueil');
+
+            // } else if (loginUser.user.roles == "ROLE_PARENT") {
+            //     history.push('/parent/accueil');
+            // }
+            // else if (loginUser.user.roles == "ROLE_ENS") {
+            //     history.push('/enseignant/accueil');
+            // }
+        } else {
+            console.log("error");
+            // 
+        }
+
+
+        //     if (loginUser.message === "success") {
+        //         localStorage.setItem('user_id', loginUser.user.token);
+        //         localStorage.setItem('user_role', loginUser.user.roles);
+        //         yield put(loginUserSuccess(loginUser.user));
+        //         if (loginUser.user.roles == "ROLE_ADMIN") {
+        //             history.push('/ecole/accueil');
+
+        //         } else if (loginUser.user.roles == "ROLE_PARENT") {
+        //             history.push('/parent/accueil');
+        //         }
+        //         else if (loginUser.user.roles == "ROLE_ENS") {
+        //             history.push('/enseignant/accueil');
+        //         }
+        //     } else {
+        //         yield put(loginUserError(loginUser.message));
+        //     }
+    } catch (error) {
+
+        yield put(loginUserError(error));
+
+
+    }
+}
+
+
+export function* watchRegisterUser() {
+    yield takeEvery(REGISTER_USER, registerWithEmailPassword);
+}
+
+const registerWithEmailPasswordAsync = async (email, password) =>
+    await auth.createUserWithEmailAndPassword(email, password)
+        .then(authUser => authUser)
+        .catch(error => error);
+
+function* registerWithEmailPassword({ payload }) {
+    const { email, password } = payload.user;
+    const { history } = payload
+    try {
+        const registerUser = yield call(registerWithEmailPasswordAsync, email, password);
+        if (!registerUser.message) {
+            localStorage.setItem('user_id', registerUser.user.uid);
+            yield put(registerUserSuccess(registerUser));
+            history.push('/')
+        } else {
+            yield put(registerUserError(registerUser.message));
+
+        }
+    } catch (error) {
+        yield put(registerUserError(error));
+    }
+}
+
+
+
+export function* watchLogoutUser() {
+    yield takeEvery(LOGOUT_USER, logout);
+}
+
+const logoutAsync = async (history) => {
+    await auth.signOut().then(authUser => authUser).catch(error => error);
+    history.push('/')
+}
+
+function* logout({ payload }) {
+    const { history } = payload
+    try {
+        yield call(logoutAsync, history);
+        localStorage.clear();
+        // localStorage.removeItem('user_id');
+        // localStorage.removeItem('user_role');
+    } catch (error) {
+    }
+}
+
+export function* watchForgotPassword() {
+    yield takeEvery(FORGOT_PASSWORD, forgotPassword);
+}
+
+const forgotPasswordAsync = async (email) => {
+    return await auth.sendPasswordResetEmail(email)
+        .then(user => user)
+        .catch(error => error);
+}
+
+function* forgotPassword({ payload }) {
+    console.log(payload, 'forgotttttttt')
+    const { email } = payload.forgotUserMail;
+    try {
+        const forgotPasswordStatus = yield call(forgotPasswordAsync, email);
+        if (!forgotPasswordStatus) {
+            yield put(forgotPasswordSuccess("success"));
+        } else {
+            yield put(forgotPasswordError(forgotPasswordStatus.message));
+        }
+    } catch (error) {
+        yield put(forgotPasswordError(error));
+
+    }
+}
+
+export function* watchResetPassword() {
+    yield takeEvery(RESET_PASSWORD, resetPassword);
+}
+
+const resetPasswordAsync = async (resetPasswordCode, newPassword) => {
+    return await auth.confirmPasswordReset(resetPasswordCode, newPassword)
+        .then(user => user)
+        .catch(error => error);
+}
+
+function* resetPassword({ payload }) {
+    console.log(payload)
+    const { newPassword } = payload;
+    const { history } = payload;
+    try {
+
+
+
+        const data = yield axios({
+            method: 'post',
+            url: "http://api.onyx.inedit-gd.tn/admins/auth/reset",
+            data: { "password": newPassword },
+        }).then(res => res)
+
+
+        if (data.status != 400) {
+            // var loginUser = data.data
+            // const { id, nomPrenom, email, dateCreation, roles, firstlogin, statut } = loginUser;
+            // loginUser = { user: { id, nomPrenom, email, dateCreation, roles, firstlogin }, statut };
+            localStorage.getItem('user_id');
+            localStorage.getItem('user_role');
+            localStorage.getItem('first_login');
+            localStorage.getItem('type');
+
+            yield put(resetPasswordSuccess("success"));
+            if (['ROLE_GESTION_ECOLE', 'ROLE_EMPLOI', 'ROLE_NOTES', 'ROLE_CALENDRIER_EXAMENS', 'ROLE_ORGANISATION'].includes(localStorage.getItem('user_role').split(' ')[0])
+                // && loginUser.statut === "actif"
+            ) {
+                history.push('/ecole/accueil');
+                // localStorage.setItem('accueil', '/ecole/accueil');
+
+            }
+            else if (localStorage.getItem('user_role') === "ROLE_PARENT") {
+                history.push('/parent/accueil');
+                // localStorage.setItem('accueil', '/parent/accueil');
+
+            }
+            else if (localStorage.getItem('user_role') === "ROLE_ENS") {
+                history.push('/enseignant/accueil');
+                // localStorage.setItem('accueil', '/enseignant/accueil');
+
+            }
+        }
+
+        else {
+            yield put(resetPasswordError("Erreur réinitialisation de mot de passe"));
+            NotificationManager.error(
+                "Erreur réinitialisation de mot de passe",
+                "MOT DE PASSE",
+                5000,
+                null,
+                null,
+            );
+
+
+        }
+    }
+
+    catch (error) {
+
+        yield put(resetPasswordError("Erreur réinitialisation de mot de passe"));
+
+    }
+
+
+    // const { newPassword, newPasswordAgain, resetPasswordCode } = payload;
+
+
+    // try {
+    //     const resetPasswordStatus = yield call(resetPasswordAsync, resetPasswordCode, newPassword);
+    //     if (!resetPasswordStatus) {
+    //         yield put(resetPasswordSuccess("success"));
+    //     } else {
+    //         yield put(resetPasswordError(resetPasswordStatus.message));
+    //     }
+    // } catch (error) {
+    //     yield put(resetPasswordError(error));
+
+    // }
+}
+
+export default function* rootSaga() {
+    yield all([
+        fork(watchLoginUser),
+        fork(watchLogoutUser),
+        fork(watchRegisterUser),
+        fork(watchForgotPassword),
+        fork(watchResetPassword),
+    ]);
+}

@@ -1,0 +1,27 @@
+#cjour{
+    .cardelev{
+        height: 100%;
+    width: 220%;
+    margin-left: -62%;
+        .table-responsive{
+        display: block;
+        color: grey;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        
+          width: 100%;
+          margin-left: 0%;
+        
+       
+    
+    th#pp {
+      text-align: center;
+      margin-left: 13px;
+      width: 34%;
+  }
+      th#entree{text-align: center;margin-left: 13px;    width: 34%; }
+      th#dessert{text-align: center;margin-left: 13px; width: 34%;}
+}
+}
+}

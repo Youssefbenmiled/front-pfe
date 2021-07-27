@@ -1,0 +1,47 @@
+/*.btn-secondary {
+  background-color: #3c4b9a;
+  border-color: #3c4b9a;
+  color: #d0d0d0;
+  width: 20%;
+  margin-left: 310px;
+}
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  width: 20%;
+}*/
+#titre {
+  width: 72%;
+  margin-left: 15%;
+}
+
+#lieu {
+  width: 72%;
+  margin-left: 15%;}
+#desc {
+  width: 72%;
+  margin-left: 15%;
+resize: none;}
+#send {
+  width: 22%;
+  margin-top: 30px;
+  margin-left: 310px;
+  border-color: #334080 !important;
+  background-color: #334080 !important;
+}
+#reset {
+  width: 23%;
+  margin-top: 30px;
+  background-color: #c82333;
+  border-color: #bd2130;
+  margin-left: 1%;
+}
+.form-control-file, .form-control-range {
+  display: block;
+  width: 72%;
+  margin-left: 15%;
+}
+
+div#Card {
+  width: 154%;
+}

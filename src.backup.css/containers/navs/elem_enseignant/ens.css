@@ -1,0 +1,61 @@
+.dropdown-menu {
+  font-size: 0.8rem;
+  border-radius: border-radius;
+  background: input-background;
+  border-color: rgba(primary-color, 0.15);
+  width: 235px !important;
+  height: 400px !important;
+}
+.ddm {
+  font-size: 0.8rem;
+  border-radius: border-radius;
+  background: input-background;
+  border-color: rgba(primary-color, 0.15);
+  width: 235px !important;
+  height: 245px !important;
+}
+.dropdown-menu-right {
+  right: 0;
+  margin-bottom: -39px;
+  left: auto;
+}
+.navbar .icon-menu-item i {
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 23px;
+}
+
+.rc-switch.custom-switch.custom-switch-small {
+  width: 42px !important;
+  bottom: 5px;
+  height: 23px !important;
+}
+
+.navbar .navbar-right .user {
+  margin-right: 50px;
+  bottom: 4px;
+}
+
+.navbar .navbar-right {
+  flex-basis: 40%;
+  text-align: right;
+  margin-top: -16px;
+}
+.navbar .menu-button {
+  width: 122px;
+  margin-top: -37px;
+  height: 17px;
+}
+.navbar .header-icon {
+  font-size: 22px;
+  color: #8f8f8f;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  vertical-align: baseline;
+  vertical-align: initial;
+}
+.navbar .menu-button svg {
+  height: 22px;
+  width: 20px;
+  margin-left: -4px;
+}

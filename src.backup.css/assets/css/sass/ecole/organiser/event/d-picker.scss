@@ -1,0 +1,64 @@
+// #CB {
+//   width: 156%;
+// }
+// #Card {
+//   /* background-color: green;*/
+//   width: 1087px;
+// }
+// #DU {
+//   flex: 0 0 50%;
+//   max-width: 68% !important;
+//   margin-left: 0%;
+// }
+// #AU {
+//   flex: 0 0 50%;
+//   max-width: 68% !important;
+//   margin-left: -42%;
+// }
+// #send {
+//   width: 22%;
+//   margin-top: 30px;
+// }
+// #reset {
+//   width: 22%;
+//   margin-top: 30px;
+// }
+
+.chronique-event-ens{
+
+
+label#ap {
+  margin-left: 17px;
+}
+label#ja {
+  margin-left: 28%;
+}
+
+.datepicker-du {
+.react-datepicker {
+  top: 0px;
+  right: -262px;
+    position: fixed;
+  min-width: 331px;
+}
+input#DU {
+  margin-top: 8px;
+  margin-left: -68px;
+  min-width: 500px !important;
+}
+}
+.datepicker-au {
+.react-datepicker {
+  top: 0px;
+  position: fixed;
+  min-width: 331px;
+  right: -270px;
+}
+   input#AU {
+    margin-top: 27px;
+    min-width: 537%;
+    margin-left: -62%;
+    }
+}
+
+}

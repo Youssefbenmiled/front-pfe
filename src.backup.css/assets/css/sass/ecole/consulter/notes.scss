@@ -1,0 +1,51 @@
+textarea#ligne {
+  width: 95%;
+  resize: none;
+}
+.table {
+  width: 75%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+.table-responsive {
+  display: block;
+  width: 130%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.mb-4,
+.my-4 {
+  margin-bottom: 1.5rem !important;
+  width: 140%;
+  right: 70px;
+}
+
+div#colxx {
+  flex: 0 0 50%;
+  max-width: 78%;
+  margin-left: 25px;
+}
+textarea#mg {
+  width: 39%;
+  margin-left: 260px;
+  resize: none;
+}
+#imp {
+  width: 23%;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 513px;
+}
+textarea#mg {
+  width: 30%;
+  margin-left: 282px;
+  resize: none;
+}
+div#colxx {
+  flex: 0 0 50%;
+  max-width: 74%;
+  margin-left: 56px;
+}

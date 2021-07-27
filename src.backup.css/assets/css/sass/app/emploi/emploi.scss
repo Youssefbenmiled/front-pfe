@@ -1,0 +1,94 @@
+
+.emp-parent{
+    div#cardelev {
+        width: 104%;
+        margin-left: -2%;
+        height: 100%;
+    }
+   
+    .table-responsive {
+        margin-left: -5px;
+        margin-top: 35px;
+        display: block;
+        width: 101%;
+        color:grey;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        th#lundi {
+            height: 90px;
+            padding-top: 35px;
+            width: 10%;
+        }
+        th#mardi {
+            height: 90px;
+            padding-top: 35px;
+            width: 10%;
+        }
+        th#mercredi {
+            height: 90px;
+            padding-top: 35px;
+            width: 10%;
+        }
+        th#jeudi {
+            height: 90px;
+            padding-top: 35px;
+            width: 10%;
+        }
+        th#vendredi {
+            height: 90px;
+            padding-top: 35px;
+            width: 10%;
+        }
+        th#samedi {
+            height: 90px;
+            padding-top: 35px;
+            width: 10%;
+        }
+        th#dimanche {
+            height: 90px;
+            padding-top: 35px;
+            width: 10%;
+        }
+        th#s1 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s2 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s3 {
+            text-align: center;
+            width: 100px;
+            }
+        th#s4 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s5 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s6 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s7 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s8 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s9 {
+            text-align: center;
+            width: 100px;
+        }
+        th#s10 {
+            text-align: center;
+            width: 100px;
+        }
+    }
+}

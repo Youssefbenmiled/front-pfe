@@ -1,0 +1,177 @@
+@import './ligne';
+
+
+   #tous-maj{
+    margin-top: 40px;
+ .table-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    margin-left: 0%;
+
+
+    .table {
+        
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        th#t-tm{text-align: center; width: 1%;}
+
+        th#cls-tm{text-align: center; width: 10%;}
+
+        th#typ-tm{text-align: center;width: 10%;}
+
+        th#mat-tm{text-align: center;width: 13%;}
+
+        th#date-tm{text-align: center;width: 18%;}
+
+        th#heure-tm{text-align: center;width: 18%;}
+        
+        th#maj-tm{text-align: center;width: 20%;}
+
+
+    }
+}
+}
+   #periode-maj{
+    margin-top: 40px;
+    .table-responsive {
+       
+
+        margin-left: auto;
+margin-right: auto;
+       display: block;
+       width: 100%;
+       margin-left: 0%;
+       .table {
+        
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        th#t-pm{text-align: center; width: 1%;}
+
+        th#cls-pm{text-align: center; width: 10%;}
+
+        th#typ-pm{text-align: center;width: 10%;}
+
+        th#mat-pm{text-align: center;width: 13%;}
+
+        th#date-pm{text-align: center;width: 18%;}
+
+        th#heure-pm{text-align: center;width: 18%;}
+
+        th#maj-pm{text-align: center}
+
+    }
+   }
+   }
+  
+   #mat-maj{
+    margin-top: 40px;
+    .table-responsive {
+        margin-left: auto;
+margin-right: auto;
+       display: block;
+       width: 100%;
+       margin-left: 0%;
+
+       .table {
+        
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        th#t-mm{text-align: center; width: 1%;}
+
+        th#cls-mm{text-align: center; width: 10%;}
+
+        th#typ-mm{text-align: center;width: 10%;}
+
+        th#mat-mm{text-align: center;width: 13%;}
+
+        th#date-mm{text-align: center;width: 18%;}
+
+        th#heure-mm{text-align: center;width: 18%;}
+        
+        th#maj-mm{text-align: center}
+
+    }
+   }
+   }
+   div#Valuemat {
+    margin-top: -15px;
+}
+.ligne-ens{
+    td#t{text-align: center;}
+  
+    td#cls{text-align: center;}
+  
+    td#typ{text-align: center;}
+  
+    td#mat{text-align: center;}
+  
+    td#date{text-align: center;}
+  
+    td#heure{text-align: center;}
+      
+      a#nav_link_modifier {
+          // cursor: pointer;
+          // color: blue; 
+          // -ms-transform: scale(1.5); /* IE 9 */
+          // -webkit-transform: scale(1.5); /* Safari 3-8 */
+          // transform: scale(1.5); 
+          //   #modif {
+          //     margin-left: 0%;
+          //     width: 100%;
+          //     padding-top: 5px;
+          //     padding-bottom: 5px;
+          //     padding-left: 0px;
+          // }  
+          td#modif {
+            width: 10% !important;
+            text-align: center; 
+    
+        }
+        td#supp {
+            width: 9% !important;
+            text-align: center; 
+    
+        }
+           }
+  
+  
+  
+      a#nav_link_supprimer {
+  
+          // cursor: pointer;
+          // color: red; 
+          // -ms-transform: scale(1.5); /* IE 9 */
+          // -webkit-transform: scale(1.5); /* Safari 3-8 */
+          // transform: scale(1.5); 
+        //   #supp {
+        //     margin-left: 0%;
+        //     width: 100%;
+        //     padding-top: 5px;
+        //     padding-bottom: 5px;
+        //     padding-left: 15px;
+        // }
+        td#modif {
+          width: 10% !important;
+          text-align: center; 
+  
+      }
+      td#supp {
+          width: 9% !important;
+          text-align: center; 
+  
+      }
+  
+        }
+      }
+  

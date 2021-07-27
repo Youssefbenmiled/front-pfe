@@ -1,0 +1,18 @@
+.tr {
+  width: 800px !important;
+  height: 200px !important;
+}
+.search-sm.d-inline-block.float-md-left.mr-1.mb-1.align-top {
+  margin-top: -76px;
+  margin-left: 230px;
+}
+/* 
+.dropdown-menu.show
+{
+    position: absolute;
+    will-change: transform;
+    top: 412px;
+    left: 0px;
+    transform: translate3d(0px, -389px, 0px);
+    max-height: 190px;
+} */

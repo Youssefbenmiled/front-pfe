@@ -1,0 +1,240 @@
+@import './modif_supp';
+#tous-maj-cours{
+    margin-top: 40px;
+ .table-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    margin-left: 0%;
+
+
+    .table {
+    
+
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        margin-left: 0%;
+        th#date{text-align: center;}
+        th#t {
+            text-align: center;
+            width: 1%;
+        }
+      
+        th#classe {
+            width: 12%;
+            text-align: center;
+        }     
+          
+        th#mat {
+            text-align: center;
+            width: 12%;
+        }
+       
+        th#travail {
+            text-align: center;
+            width: 16%;
+
+        }
+         
+        // a.nav_link_voir-maj-travail:hover {
+        //     cursor: pointer;
+        //     color: purple; 
+        //     -ms-transform: scale(1.5); /* IE 9 */
+        //     -webkit-transform: scale(1.5); /* Safari 3-8 */
+        //     transform: scale(1.5); 
+        //       #voir-link-maj-travail {
+        //         width: 100%;
+            
+        //     }  
+        //      }  
+        th#cours {
+            text-align: center;
+            width: 16%;
+        }
+      
+        // a.nav_link_voir-maj-cours:hover {
+        //     cursor: pointer;
+        //     color: purple; 
+        //     -ms-transform: scale(1.5); /* IE 9 */
+        // -webkit-transform: scale(1.5); /* Safari 3-8 */
+        // transform: scale(1.5); 
+        //       #voir-link-maj-cours {
+        //         width: 100%;
+            
+        //     }  
+        //      }
+        
+       
+        th#maj {
+            text-align: center;
+            width: 25%;
+        }      
+           
+       
+
+    }
+}
+}
+
+   #periode-maj-cours{
+    margin-top: 40px;
+ .table-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    margin-left: 0%;
+
+
+    .table {
+    
+
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        margin-left: 0%;
+        th#date{text-align: center;}
+        th#t {
+            text-align: center;
+            width: 1%;
+        }
+      
+        th#classe {
+            width: 12%;
+            text-align: center;
+        }     
+          
+        th#mat {
+            text-align: center;
+            width: 12%;
+        }
+       
+        th#travail {
+            text-align: center;
+            width: 16%;
+
+        }
+         
+        // a.nav_link_voir-maj-travail:hover {
+        //     cursor: pointer;
+        //     color: purple; 
+        //     -ms-transform: scale(1.5); /* IE 9 */
+        //     -webkit-transform: scale(1.5); /* Safari 3-8 */
+        //     transform: scale(1.5); 
+        //       #voir-link-maj-travail {
+        //         width: 100%;
+            
+        //     }  
+        //      }  
+        th#cours {
+            text-align: center;
+            width: 16%;
+        }
+      
+        // a.nav_link_voir-maj-cours:hover {
+        //     cursor: pointer;
+        //     color: purple; 
+        //     -ms-transform: scale(1.5); /* IE 9 */
+        // -webkit-transform: scale(1.5); /* Safari 3-8 */
+        // transform: scale(1.5); 
+        //       #voir-link-maj-cours {
+        //         width: 100%;
+            
+        //     }  
+        //      }
+        
+       
+        th#maj {
+            text-align: center;
+            width: 25%;
+        }      
+           
+       
+
+    }
+}
+   }
+  
+   #mat-maj-cours{
+    margin-top: 40px;
+ .table-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    margin-left: 0%;
+
+
+    .table {
+    
+
+        width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        margin-left: 0%;
+        th#date{text-align: center;}
+        th#t {
+            text-align: center;
+            width: 1%;
+        }
+      
+        th#classe {
+            width: 12%;
+            text-align: center;
+        }     
+          
+        th#mat {
+            text-align: center;
+            width: 12%;
+        }
+       
+        th#travail {
+            text-align: center;
+            width: 16%;
+
+        }
+         
+        // a.nav_link_voir-maj-travail:hover {
+        //     cursor: pointer;
+        //     color: purple; 
+        //     -ms-transform: scale(1.5); /* IE 9 */
+        //     -webkit-transform: scale(1.5); /* Safari 3-8 */
+        //     transform: scale(1.5); 
+        //       #voir-link-maj-travail {
+        //         width: 100%;
+            
+        //     }  
+        //      }  
+        th#cours {
+            text-align: center;
+            width: 16%;
+        }
+      
+        // a.nav_link_voir-maj-cours:hover {
+        //     cursor: pointer;
+        //     color: purple; 
+        //     -ms-transform: scale(1.5); /* IE 9 */
+        // -webkit-transform: scale(1.5); /* Safari 3-8 */
+        // transform: scale(1.5); 
+        //       #voir-link-maj-cours {
+        //         width: 100%;
+            
+        //     }  
+        //      }
+        
+       
+        th#maj {
+            text-align: center;
+            width: 25%;
+        }      
+           
+       
+
+    }
+}
+   }
+   div#Valuemat {
+    margin-top: -15px;
+}

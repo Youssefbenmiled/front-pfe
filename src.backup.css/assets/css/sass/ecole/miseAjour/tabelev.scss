@@ -1,0 +1,29 @@
+div#tabelev {
+    width: 200%;
+}
+div#cardelev {
+    width: 212%;
+    margin-left: -16px;
+}
+.table-responsive {
+    display: block;
+    width: 49%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+button#envoyer {
+    width: 35%;
+    margin-left: 85%;
+}
+#reset {
+    width: 35%;
+    margin-top: -11%;
+    margin-left: 685px;
+}
+.table {
+    width: 85%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    margin-left: 11%;
+}
